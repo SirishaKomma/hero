@@ -4,5 +4,7 @@
     <div class="module hero" routerLink="/detail/{{hero.id}}">
       <h4>{{hero.name}}</h4>
     </div>
+    <button (click)="remove(hero)">X</button>
   </a>
 </div>
+<app-hero-search></app-hero-search>

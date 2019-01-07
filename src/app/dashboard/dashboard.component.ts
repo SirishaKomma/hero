@@ -13,6 +13,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
   }
+  remove(hero){
+    this.heroes=this.heroes.filter(h=>h.id!==hero.id);
+    this.heroService.deleteHero(hero.id).subscribe()
+  }
   getHeroes() {
     this.heroService.getHeroes().subscribe((heroes: Hero[]) => {
       this.heroes = heroes.slice(1, 5);

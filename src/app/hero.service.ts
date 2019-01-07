@@ -6,12 +6,13 @@ import { MessagesService } from './messages.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { httpClientInMemBackendServiceFactory } from 'angular-in-memory-web-api';
 import { catchError, map, tap } from 'rxjs/operators';
-@Injectable({
-  providedIn: 'root'
-})
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'Application/json' })
 };
+@Injectable({
+  providedIn: 'root'
+})
+
 export class HeroService {
   private heroesUrl = 'api/heroes';
 
